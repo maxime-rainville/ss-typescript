@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "819f46641529fdb3fa07855b2da29917",
+    "content-hash": "e313954dc37d83a93253eb8d8179f3fd",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -1196,16 +1196,16 @@
         },
         {
             "name": "silverstripe/asset-admin",
-            "version": "1.x-dev",
+            "version": "dev-pulls/1/typescript-webscript-boom-boom-pow",
             "source": {
                 "type": "git",
-                "url": "https://github.com/silverstripe/silverstripe-asset-admin.git",
-                "reference": "0bee1de4ea1c57136cb02276e50e3c902a47def3"
+                "url": "https://github.com/open-sausages/silverstripe-asset-admin.git",
+                "reference": "105d8f630c34dc8b2cab8a8bd32101ec05b09339"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-asset-admin/zipball/0bee1de4ea1c57136cb02276e50e3c902a47def3",
-                "reference": "0bee1de4ea1c57136cb02276e50e3c902a47def3",
+                "url": "https://api.github.com/repos/open-sausages/silverstripe-asset-admin/zipball/105d8f630c34dc8b2cab8a8bd32101ec05b09339",
+                "reference": "105d8f630c34dc8b2cab8a8bd32101ec05b09339",
                 "shasum": ""
             },
             "require": {
@@ -1236,12 +1236,22 @@
                     "SilverStripe\\AssetAdmin\\Tests\\Behat\\Context\\": "tests/behat/src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "scripts": {
+                "lint": [
+                    "phpcs -s code/ tests/"
+                ],
+                "lint-clean": [
+                    "phpcbf code/ tests/"
+                ]
+            },
             "license": [
                 "BSD-3-Clause"
             ],
             "description": "Asset management for the SilverStripe CMS",
-            "time": "2019-05-10T03:21:36+00:00"
+            "support": {
+                "source": "https://github.com/open-sausages/silverstripe-asset-admin/tree/pulls/1/typescript-webscript-boom-boom-pow"
+            },
+            "time": "2019-05-23T22:44:47+00:00"
         },
         {
             "name": "silverstripe/assets",
@@ -4030,12 +4040,19 @@
             "alias_normalized": "1.5.9999999.9999999-dev",
             "version": "dev-pulls/1/typescript-webscript-boom-boom-pow",
             "package": "silverstripe/admin"
+        },
+        {
+            "alias": "1.5.x-dev",
+            "alias_normalized": "1.5.9999999.9999999-dev",
+            "version": "dev-pulls/1/typescript-webscript-boom-boom-pow",
+            "package": "silverstripe/asset-admin"
         }
     ],
     "minimum-stability": "dev",
     "stability-flags": {
         "silverstripe/recipe-cms": 20,
-        "silverstripe/admin": 20
+        "silverstripe/admin": 20,
+        "silverstripe/asset-admin": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
